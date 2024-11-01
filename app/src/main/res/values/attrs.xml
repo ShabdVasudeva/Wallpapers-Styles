@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="ColorLinearLayout">
+        <attr name="topLabelText" format="string" />
+        <attr name="topLabelColor" format="color" />
+    </declare-styleable>
+    <attr name="toolbarColor" format="color"/>
+</resources>

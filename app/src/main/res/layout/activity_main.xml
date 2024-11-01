@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?attr/toolbarColor"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_height="179dp"
+            android:layout_width="match_parent"
+            app:expandedTitleTextAppearance="@style/Theme.Apw.ToolbarExpanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:elevation="0dp"
+            android:id="@+id/collapse"
+            app:expandedTitleGravity="left|bottom"
+            app:titleCollapseMode="fade"
+            app:statusBarScrim="?attr/toolbarColor"
+            app:contentScrim="?attr/toolbarColor"
+            android:background="?colorSurface"
+            app:collapsedTitleTextAppearance="@style/Theme.Apw.ToolbarCollapsed"
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            app:expandedTitleMarginBottom="31dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                android:id="@+id/toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <org.android.themepicker.cl.HomeLockWidget
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/widgets" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/topcard"
+                android:paddingTop="26dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingBottom="16dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/fab1" />
+
+                    <View
+                        android:layout_height="wrap_content"
+                        android:layout_width="10dp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/fab2" />
+
+                    <View
+                        android:layout_height="wrap_content"
+                        android:layout_width="10dp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/fab3" />
+
+                    <View
+                        android:layout_height="wrap_content"
+                        android:layout_width="10dp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/fab4" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:icon="@drawable/palette"
+                    android:gravity="center"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/more"
+                    android:layout_gravity="center"
+                    android:text="More Colors" />
+
+            </LinearLayout>
+
+            <org.android.themepicker.cl.CustomLinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
